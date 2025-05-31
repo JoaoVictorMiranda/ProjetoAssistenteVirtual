@@ -11,21 +11,15 @@ export function Menu() {
   console.log(`##        ${chalk.blue("MENU")}        ##`);
   console.log("########################");
   console.log("##  1° soma           ##");
-  console.log("##  2° Subtração      ##");
+  console.log("##  2° CALCULADORA    ##");
   console.log("##  3° multiplicação  ##");
   console.log("##  4° Saiba Mais     ##");
   console.log("##  0° sair           ##");
   console.log("########################");
-  return PerguntaOpcao("QUAL SERIA SUA DECISÃO SENHOR????");
 }
 
-export async function VerificarOpcao(opcao) {
-  if (opcao == 4) {
-    await functions.Inicial();
-    SaibaMais();
-  }
-}
-export async function SaibaMais() {
+export function SaibaMais() {
+  functions.deletar();
   console.log("#################################################");
   console.log(`##                    Saiba                    ##`);
   console.log(`##                     Mais                    ##`);
@@ -39,9 +33,49 @@ export async function SaibaMais() {
   console.log("##                                             ##");
   console.log("##                  0° sair                    ##");
   console.log("#################################################");
+  PerguntaOpcao("Gostaria de sair? ");
+  functions.deletar();
 }
 
 export function PerguntaOpcao(msg) {
-  console.log(msg);
-  return Number(input());
+  let resposta = input();
+
+  if (resposta === "sans") {
+    console.log(`██████████▀▀▀▀▀▀▀▀▀▀▀▀▀██████████
+█████▀▀░░░░░░░░░░░░░░░░░░░▀▀█████
+███▀░░░░░░░░░░░░░░░░░░░░░░░░░▀███
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+█░░░░░░▄▄▄▄▄▄░░░░░░░░▄▄▄▄▄▄░░░░░█
+█░░░▄██▀░░░▀██░░░░░░██▀░░░▀██▄░░█
+█░░░██▄░░▀░░▄█░░░░░░█▄░░▀░░▄██░░█
+██░░░▀▀█▄▄▄██░░░██░░░██▄▄▄█▀▀░░██
+███░░░░░░▄▄▀░░░████░░░▀▄▄░░░░░███
+██░░░░░█▄░░░░░░▀▀▀▀░░░░░░░█▄░░░██
+██░░░▀▀█░█▀▄▄▄▄▄▄▄▄▄▄▄▄▄▀██▀▀░░██
+███░░░░░▀█▄░░█░░█░░░█░░█▄▀░░░░███
+████▄░░░░░░▀▀█▄▄█▄▄▄█▄▀▀░░░░▄████
+███████▄▄▄▄░░░░░░░░░░░░▄▄▄███████`);
+    return PerguntaOpcao(msg); // volta para perguntar novamente
+  }
+
+  let valor = Number(resposta);
+
+  if (isNaN(valor)) {
+    console.log("Por favor, insira um número válido.");
+    return PerguntaOpcao(msg); // recursivo até acertar
+  }
+
+  return valor;
+}
+
+export async function FinalizarPrograma() {
+  process.stdout.write("\x1B[2J\x1B[0f");
+  console.log("╭────────────────────────────────────────╮");
+  console.log("│                                        │");
+  console.log("│            PROCESSO FINALIZADO         │");
+  console.log("│                                        │");
+  console.log("│        Obrigado por utilizar Ana       │");
+  console.log("│               Clara Assistente         │");
+  console.log("│                                        │");
+  console.log("╰────────────────────────────────────────╯");
 }
