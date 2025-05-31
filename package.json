@@ -1,0 +1,26 @@
+{
+  "name": "projetoassistentevirtual",
+  "version": "1.0.0",
+  "description": "Trabalho assistente virtual para as aulas de JavaScript(Bruno)",
+  "homepage": "https://github.com/JoaoVictorMiranda/ProjetoAssistenteVirtual#readme",
+  "bugs": {
+    "url": "https://github.com/JoaoVictorMiranda/ProjetoAssistenteVirtual/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoVictorMiranda/ProjetoAssistenteVirtual.git"
+  },
+  "license": "ISC",
+  "author": "João Victor",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "boxen": "^8.0.1",
+    "chalk": "^5.4.1",
+    "figlet": "^1.8.1",
+    "prompt-sync": "^4.2.0"
+  }
+}
