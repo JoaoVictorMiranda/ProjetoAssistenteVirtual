@@ -14,15 +14,6 @@ export async function Carregando(
   await sleep(ms / 2);
 }
 
-export async function Inicial(ms, ponto, msg) {
-  process.stdout.write("\x1B[2J\x1B[0f");
-  console.log(`${chalk.bgCyan("######################################")}`);
-  console.log(`##########${chalk.blue("CARREGANDO AGUARDE")}##########`);
-  console.log(`${chalk.bgCyan("######################################")}`);
-  await Carregando(ms, ponto, msg);
-  process.stdout.write("\x1B[2J\x1B[0f");
-}
-
 export function deletar() {
   return process.stdout.write("\x1B[2J\x1B[0f");
 }
