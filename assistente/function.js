@@ -31,7 +31,7 @@ export function relatorios() {
     console.log("║  2° 📂 Relatório atual (Junho)                     ║");
     console.log("║  3° 📈 Gráficos de desempenho                      ║");
     console.log("║  4° 🛒 Produtos mais vendidos                      ║");
-    console.log("║  0° 🔙 Voltar ao menu principal                    ║");
+    console.log("║  0° 🔙 Voltar ao menu principal                   ║");
     console.log("╚════════════════════════════════════════════════════╝");
 
     const opcao = PerguntaOpcao("Digite a opção desejada: ");
@@ -41,7 +41,7 @@ export function relatorios() {
     switch (opcao) {
       case 1:
         console.log("╔════════════════════════════════════════════════════╗");
-        console.log("║               📁 RELATÓRIO - MAIO                  ║");
+        console.log("║               📁 RELATÓRIO - MAIO                 ║");
         console.log("╠════════════════════════════════════════════════════╣");
         console.log("║ VENDAS TOTAIS:                                     ║");
         console.log("║     → R$ 10.500,00                                 ║");
@@ -57,7 +57,7 @@ export function relatorios() {
 
       case 2:
         console.log("╔════════════════════════════════════════════════════╗");
-        console.log("║              📂 RELATÓRIO - JUNHO (ATUAL)          ║");
+        console.log("║              📂 RELATÓRIO - JUNHO (ATUAL)         ║");
         console.log("╠════════════════════════════════════════════════════╣");
         console.log("║ VENDAS PARCIAIS:                                   ║");
         console.log("║     → R$ 4.200,00 (1ª quinzena)                    ║");
