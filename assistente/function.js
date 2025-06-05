@@ -14,7 +14,7 @@ export function Menu() {
   console.log("╠════════════════════════════════════════════════════╣");
   console.log("║  1° Relatorios                                     ║");
   console.log("║  2° Calculadora                                    ║");
-  console.log("║  3° Configurações                                  ║");
+  console.log("║  3° Funcionarios                                   ║");
   console.log("║  4° Saiba Mais                                     ║");
   console.log("║  0° SAIR                                           ║");
   console.log("╚════════════════════════════════════════════════════╝");
