@@ -11,7 +11,7 @@ export function Menu() {
   console.log(
     `║                     ${chalk.blue("Virtual")}                        ║`
   );
-  console.log("╠════════════════════════════════════════════════════╣");
+  console.log("╔════════════════════════════════════════════════════╗");
   console.log("║  1° Relatorios                                     ║");
   console.log("║  2° Calculadora                                    ║");
   console.log("║  3° Funcionarios                                   ║");
@@ -25,13 +25,13 @@ export function relatorios() {
   let sair = false;
   while (!sair) {
     console.log("╔════════════════════════════════════════════════════╗");
-    console.log("║              🔍 RELATÓRIOS DA EMPRESA              ║");
+    console.log("║                 RELATÓRIOS DA EMPRESA              ║");
     console.log("╠════════════════════════════════════════════════════╣");
-    console.log("║  1° 📁 Relatório do último mês (Maio)              ║");
-    console.log("║  2° 📂 Relatório atual (Junho)                     ║");
-    console.log("║  3° 📈 Gráficos de desempenho                      ║");
-    console.log("║  4° 🛒 Produtos mais vendidos                      ║");
-    console.log("║  0° 🔙 Voltar ao menu principal                   ║");
+    console.log("║  1°  Relatório do último mês (Maio)                ║");
+    console.log("║  2°  Relatório atual (Junho)                       ║");
+    console.log("║  3°  Gráficos de desempenho                        ║");
+    console.log("║  4°  Produtos mais vendidos                        ║");
+    console.log("║  0°  Voltar ao menu principal                      ║");
     console.log("╚════════════════════════════════════════════════════╝");
 
     const opcao = PerguntaOpcao("Digite a opção desejada: ");
@@ -41,7 +41,7 @@ export function relatorios() {
     switch (opcao) {
       case 1:
         console.log("╔════════════════════════════════════════════════════╗");
-        console.log("║               📁 RELATÓRIO - MAIO                 ║");
+        console.log("║                   RELATÓRIO - MAIO                 ║");
         console.log("╠════════════════════════════════════════════════════╣");
         console.log("║ VENDAS TOTAIS:                                     ║");
         console.log("║     → R$ 10.500,00                                 ║");
@@ -57,7 +57,7 @@ export function relatorios() {
 
       case 2:
         console.log("╔════════════════════════════════════════════════════╗");
-        console.log("║              📂 RELATÓRIO - JUNHO (ATUAL)         ║");
+        console.log("║                  RELATÓRIO - JUNHO (ATUAL)         ║");
         console.log("╠════════════════════════════════════════════════════╣");
         console.log("║ VENDAS PARCIAIS:                                   ║");
         console.log("║     → R$ 4.200,00 (1ª quinzena)                    ║");
@@ -70,7 +70,7 @@ export function relatorios() {
 
       case 3:
         console.log("╔════════════════════════════════════════════════════╗");
-        console.log("║             📈 GRÁFICO DE DESEMPENHO               ║");
+        console.log("║              GRÁFICO DE DESEMPENHO                 ║");
         console.log("╠════════════════════════════════════════════════════╣");
         console.log("║ Semana 1: ███████ (R$ 1.800)                       ║");
         console.log("║ Semana 2: ██████████ (R$ 2.400)                    ║");
@@ -83,7 +83,7 @@ export function relatorios() {
 
       case 4:
         console.log("╔════════════════════════════════════════════════════╗");
-        console.log("║             🛒 PRODUTOS MAIS VENDIDOS              ║");
+        console.log("║                 PRODUTOS MAIS VENDIDOS             ║");
         console.log("╠════════════════════════════════════════════════════╣");
         console.log("║ 1.  Caneta Azul – 320 unidades                     ║");
         console.log("║ 2.  Caderno – 245 unidades                         ║");
@@ -117,7 +117,7 @@ export function SaibaMais() {
   console.log("║                     SAIBA MAIS                     ║");
   console.log("╠════════════════════════════════════════════════════╣");
   console.log("║                                                    ║");
-  console.log("║                PRAZER SOU ANA CLARA                ║");
+  console.log("║                PRAZER SOU Ana Clara                ║");
   console.log("║           A Nova assistente virtual da NewShire    ║");
   console.log("║          Fui feita inteiramente em Javascript      ║");
   console.log("║          Estou hospedada no github(Publico)        ║");
@@ -146,7 +146,7 @@ export async function FinalizarPrograma() {
   console.log("│            PROCESSO FINALIZADO         │");
   console.log("│                                        │");
   console.log("│        Obrigado por utilizar Ana       │");
-  console.log("│               Clara Assistente         │");
+  console.log("│            Clara Assistente            │");
   console.log("│                                        │");
   console.log("╰────────────────────────────────────────╯");
 }
@@ -160,7 +160,7 @@ export function Calculadora() {
   console.log("║  2° SUBTRAÇÃO                                      ║");
   console.log("║  3° MULTIPLICAÇÃO                                  ║");
   console.log("║  4° DIVISÂO                                        ║");
-  console.log("║  0° 🔙 Voltar ao menu principal                    ║");
+  console.log("║  0°    Voltar ao menu principal                    ║");
   console.log("╚════════════════════════════════════════════════════╝");
   const operacao = PerguntaOpcao("Qual sua operação??   ");
 
@@ -175,18 +175,62 @@ export function Calculadora() {
       PerguntaOpcao("Aperte para voltar");
       Calculadora();
       break;
-    case 2:
-      console.log("SUBTRAÇÃO");
-      break;
-    case 3:
-      console.log("MULTIPLICAÇÃO");
-      break;
-    case 4:
-      console.log("DIVISÃO");
-      break;
-  }
+     case 2:
+    let sub1 = PerguntaOpcao("Qual seria seu primeiro número?   ");
+    let sub2 = PerguntaOpcao("Qual seria seu segundo número?   ");
+    console.log("");
+    let resultadoSub = subtracao(sub1, sub2);
+    console.log(chalk.black.bgCyan.bold(` ${sub1} - ${sub2} = ${resultadoSub} `));
+    console.log("");
+    PerguntaOpcao("Aperte Enter para voltar");
+    Calculadora();
+    break;
+
+  case 3: 
+    let mul1 = PerguntaOpcao("Qual seria seu primeiro número?   ");
+    let mul2 = PerguntaOpcao("Qual seria seu segundo número?   ");
+    console.log("");
+    let resultadoMul = multiplicacao(mul1, mul2);
+    console.log(chalk.black.bgGreen.bold(` ${mul1} * ${mul2} = ${resultadoMul} `));
+    console.log("");
+    PerguntaOpcao("Aperte Enter para voltar");
+    Calculadora();
+    break;
+
+  case 4:
+    let div1 = PerguntaOpcao("Qual seria seu primeiro número?   ");
+    let div2 = PerguntaOpcao("Qual seria seu segundo número?   ");
+    console.log("");
+    if (div2 == 0) {
+      console.log(chalk.white.bgRed.bold(" ERRO: Divisão por zero não é permitida! "));
+    } else {
+      let resultadoDiv = divisao(div1, div2);
+      console.log(chalk.black.bgMagenta.bold(` ${div1} / ${div2} = ${resultadoDiv} `));
+    }
+    console.log("");
+    PerguntaOpcao("Aperte Enter para voltar");
+    Calculadora();
+    break;
+
+  default:
+    console.log("Operação inválida.");
+    Calculadora();
+    break;
 }
+ }    
 
 function soma(n1, n2) {
-  return n1 + n2;
+  return n1+n2;
+}
+
+function subtracao(n1, n2) {
+  return n1 - n2;
+}
+
+function multiplicacao(n1, n2) {
+  return n1 * n2;
+}
+
+function divisao(n1, n2) {
+  return n1 /n2;
 }
