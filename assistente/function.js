@@ -212,6 +212,10 @@ export function Calculadora() {
     Calculadora();
     break;
 
+  case 0:
+       functions.deletar();
+        break;
+
   default:
     console.log("Operação inválida.");
     Calculadora();
